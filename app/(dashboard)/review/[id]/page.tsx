@@ -235,18 +235,18 @@ The takeaway: Automation is an amplifier, not a replacement.`;
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
         {/* Left Pane: Transcript */}
-        <div className="w-full md:w-2/5 border-r border-slate-200 dark:border-slate-700 flex flex-col bg-white dark:bg-surface-dark">
+        <div className="w-full md:w-2/5 border-r border-slate-200 flex flex-col bg-white">
           {/* Header */}
-          <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800">
-            <h2 className="font-bold text-slate-900 dark:text-white">{topic}</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
+          <div className="px-4 py-3 border-b border-slate-100">
+            <h2 className="font-bold text-slate-900">{topic}</h2>
+            <p className="text-sm text-slate-500">
               Interview Transcript
             </p>
           </div>
@@ -270,10 +270,10 @@ The takeaway: Automation is an amplifier, not a replacement.`;
           {/* Header */}
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-xl font-bold text-slate-900">
                 Generated Content
               </h2>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-slate-500">
                 Your content is ready to export
               </p>
             </div>
@@ -309,7 +309,7 @@ The takeaway: Automation is an amplifier, not a replacement.`;
           />
 
           {/* Add New Asset Button */}
-          <button className="w-full p-6 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl text-slate-400 dark:text-slate-500 hover:border-[#135bec] hover:text-[#135bec] transition-colors flex items-center justify-center gap-2">
+          <button className="w-full p-6 border-2 border-dashed border-slate-200 rounded-xl text-slate-400 hover:border-[#E95335] hover:text-[#E95335] transition-colors flex items-center justify-center gap-2">
             <span className="material-symbols-outlined">add_circle</span>
             Generate New Asset
           </button>

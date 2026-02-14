@@ -44,7 +44,7 @@ export function Waveform({
     <div className={cn('relative flex items-center justify-center', sizeStyles[size], className)}>
       {/* Ambient glow background (only when active) */}
       {isActive && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#135bec]/20 rounded-full blur-[60px] animate-pulse-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#E95335]/20 rounded-full blur-[60px] animate-pulse-slow" />
       )}
 
       {/* Wave bars */}
@@ -53,7 +53,7 @@ export function Waveform({
           key={i}
           className={cn(
             barSizes[size],
-            'bg-[#135bec] rounded-full transition-all duration-200',
+            'bg-[#E95335] rounded-full transition-all duration-200',
             isActive && 'animate-pulse'
           )}
           style={{

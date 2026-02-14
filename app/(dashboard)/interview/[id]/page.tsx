@@ -170,7 +170,7 @@ export default function InterviewPage() {
   // Render based on phase
   if (phase === 'loading') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background-light dark:bg-background-dark">
+      <div className="min-h-screen flex items-center justify-center bg-white">
         <LoadingState message="Loading interview..." />
       </div>
     );
@@ -178,13 +178,13 @@ export default function InterviewPage() {
 
   if (phase === 'error') {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background-light dark:bg-background-dark p-6">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
         <div className="text-center max-w-md">
           <span className="material-symbols-outlined text-6xl text-red-500 mb-4">error</span>
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">
             Something went wrong
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 mb-6">
+          <p className="text-slate-600 mb-6">
             {errorMessage || 'An unexpected error occurred.'}
           </p>
           <div className="flex gap-3 justify-center">
@@ -208,33 +208,33 @@ export default function InterviewPage() {
 
   if (phase === 'ready') {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background-light dark:bg-background-dark p-6">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
         <div className="text-center max-w-lg">
           {/* Topic Preview */}
           {topic && (
             <div className="mb-8">
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#E95335]/10 text-[#E95335] text-sm font-medium mb-4">
                 <span className="material-symbols-outlined text-[16px]">trending_up</span>
                 Today&apos;s Topic
               </span>
-              <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">
+              <h1 className="text-3xl font-bold text-slate-900 mb-3">
                 {topic.topic_title}
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-600 text-sm leading-relaxed">
                 {topic.why_this_matters}
               </p>
             </div>
           )}
 
           {/* Mic Permission Notice */}
-          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-6">
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
             <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-amber-600 dark:text-amber-400">mic</span>
+              <span className="material-symbols-outlined text-amber-600">mic</span>
               <div className="text-left">
-                <p className="font-medium text-amber-800 dark:text-amber-200 text-sm">
+                <p className="font-medium text-amber-800 text-sm">
                   Microphone access required
                 </p>
-                <p className="text-amber-700 dark:text-amber-300 text-xs mt-1">
+                <p className="text-amber-700 text-xs mt-1">
                   Please allow microphone access when prompted to enable voice conversation.
                 </p>
               </div>
@@ -261,7 +261,7 @@ export default function InterviewPage() {
             )}
           </Button>
 
-          <p className="text-slate-500 dark:text-slate-400 text-xs mt-4">
+          <p className="text-slate-500 text-xs mt-4">
             The AI will guide you through a conversation about this topic
           </p>
         </div>
@@ -271,7 +271,7 @@ export default function InterviewPage() {
 
   if (phase === 'connecting') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background-light dark:bg-background-dark">
+      <div className="min-h-screen flex items-center justify-center bg-white">
         <LoadingState
           messages={[
             'Connecting to AI interviewer...',
@@ -287,15 +287,15 @@ export default function InterviewPage() {
   const totalQuestions = topic?.key_questions.length || 5;
 
   return (
-    <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Top Bar */}
-      <header className="flex items-center justify-between px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark">
+      <header className="flex items-center justify-between px-4 md:px-6 py-3 border-b border-slate-200 bg-white">
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="size-8 rounded-lg bg-[#135bec] flex items-center justify-center text-white">
+          <div className="size-8 rounded-lg bg-[#E95335] flex items-center justify-center text-white">
             <span className="material-symbols-outlined text-[20px]">graphic_eq</span>
           </div>
-          <span className="font-bold text-slate-900 dark:text-white hidden md:inline">
+          <span className="font-bold text-slate-900 hidden md:inline">
             LadderFlow
           </span>
         </Link>
@@ -307,7 +307,7 @@ export default function InterviewPage() {
         </div>
 
         {/* Timer */}
-        <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+        <div className="flex items-center gap-2 text-slate-600">
           <span className="material-symbols-outlined text-[20px]">timer</span>
           <span className="font-mono text-sm font-medium">
             {formatDuration(duration)}
@@ -322,21 +322,21 @@ export default function InterviewPage() {
           {/* Topic Title */}
           {topic && (
             <div className="mb-6 text-center">
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900">
                 {topic.topic_title}
               </h2>
             </div>
           )}
 
           {/* Waveform */}
-          <Waveform 
-            isActive={agentState.isListening || agentState.isSpeaking} 
-            size="lg" 
+          <Waveform
+            isActive={agentState.isListening || agentState.isSpeaking}
+            size="lg"
           />
 
           {/* Status Label */}
           <div className="mt-6 text-center">
-            <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider">
               {getStatusLabel()}
             </p>
             {agentState.error && (
@@ -346,13 +346,13 @@ export default function InterviewPage() {
         </div>
 
         {/* Right Side: Transcript */}
-        <div className="w-full md:w-96 border-t md:border-t-0 md:border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark flex flex-col">
+        <div className="w-full md:w-96 border-t md:border-t-0 md:border-l border-slate-200 bg-white flex flex-col">
           {/* Transcript Header */}
-          <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <h3 className="font-semibold text-slate-900 dark:text-white">
+          <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
+            <h3 className="font-semibold text-slate-900">
               Live Transcript
             </h3>
-            <span className="text-xs text-slate-500 dark:text-slate-400">
+            <span className="text-xs text-slate-500">
               {messages.length} messages
             </span>
           </div>

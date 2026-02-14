@@ -16,14 +16,14 @@ export function StatusBadge({ variant, label, className }: StatusBadgeProps) {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
           </span>
-          <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-medium text-slate-500">
             {label || 'Live Connection'}
           </span>
         </>
       ),
     },
     recording: {
-      container: 'px-2 py-0.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] font-bold uppercase tracking-wide',
+      container: 'px-2 py-0.5 rounded-full bg-red-100 text-red-600 text-[10px] font-bold uppercase tracking-wide',
       content: label || 'Recording',
     },
     ready: {
@@ -31,7 +31,7 @@ export function StatusBadge({ variant, label, className }: StatusBadgeProps) {
       content: label || 'Ready',
     },
     generating: {
-      container: 'flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs font-semibold',
+      container: 'flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 text-xs font-semibold',
       content: (
         <>
           <span className="block size-2 rounded-full bg-slate-400 animate-pulse" />
@@ -50,7 +50,7 @@ export function StatusBadge({ variant, label, className }: StatusBadgeProps) {
           <span className="relative flex h-2 w-2">
             <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
           </span>
-          <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-medium text-slate-500">
             {label || 'Paused'}
           </span>
         </>
@@ -61,10 +61,10 @@ export function StatusBadge({ variant, label, className }: StatusBadgeProps) {
       content: (
         <>
           <span className="relative flex h-2 w-2">
-            <span className="animate-pulse absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+            <span className="animate-pulse absolute inline-flex h-full w-full rounded-full bg-[#E95335] opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E95335]" />
           </span>
-          <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-medium text-slate-500">
             {label || 'Processing'}
           </span>
         </>

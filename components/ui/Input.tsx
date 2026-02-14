@@ -13,20 +13,20 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="relative w-full">
         {icon && (
-          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
             {icon}
           </div>
         )}
         <input
           ref={ref}
           className={cn(
-            'w-full rounded-xl border bg-white py-3 text-sm font-medium shadow-sm',
-            'transition-all focus:border-[#135bec] focus:ring-4 focus:ring-[#135bec]/10 focus:outline-none',
-            'dark:bg-slate-800 dark:text-white dark:placeholder-slate-500',
+            'w-full rounded-xl border bg-[#FFF3ED] py-3 text-sm font-medium shadow-sm text-black',
+            'transition-all focus:border-[#E95335] focus:ring-4 focus:ring-[#E95335]/10 focus:outline-none',
+            'placeholder-gray-400',
             icon ? 'pl-10 pr-4' : 'px-4',
             error
               ? 'border-red-500 focus:border-red-500 focus:ring-red-500/10'
-              : 'border-slate-200 dark:border-slate-700',
+              : 'border-[#E95335]/20',
             className
           )}
           {...props}

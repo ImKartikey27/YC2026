@@ -6,7 +6,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen bg-background-light dark:bg-background-dark">
+    <div className="flex h-screen bg-[#FFE8DD]">
       {/* Sidebar */}
       <Sidebar />
 

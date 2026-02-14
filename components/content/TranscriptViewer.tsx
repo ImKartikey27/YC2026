@@ -26,16 +26,16 @@ export function TranscriptViewer({ segments, activeSegment, onSegmentClick }: Tr
           className={cn(
             'p-3 rounded-lg cursor-pointer transition-all',
             activeSegment === index
-              ? 'bg-[#135bec]/5 border-l-4 border-[#135bec]'
-              : 'hover:bg-slate-50 dark:hover:bg-slate-800/50'
+              ? 'bg-[#E95335]/5 border-l-4 border-[#E95335]'
+              : 'hover:bg-slate-50'
           )}
         >
           <div className="flex items-center gap-2 mb-1">
             <span className={cn(
               'text-xs font-semibold',
               segment.speaker === 'AI Host'
-                ? 'text-[#135bec]'
-                : 'text-slate-600 dark:text-slate-400'
+                ? 'text-[#E95335]'
+                : 'text-slate-600'
             )}>
               {segment.speaker}
             </span>
@@ -43,7 +43,7 @@ export function TranscriptViewer({ segments, activeSegment, onSegmentClick }: Tr
               {formatDuration(segment.startTime)}
             </span>
           </div>
-          <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <p className="text-sm text-slate-700 leading-relaxed">
             {segment.content}
           </p>
         </div>

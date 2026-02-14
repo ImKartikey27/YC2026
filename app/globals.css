@@ -2,32 +2,26 @@
 
 /* Design System Colors */
 :root {
-  --primary: #135bec;
-  --background-light: #f6f6f8;
-  --background-dark: #101622;
-  --surface-light: #ffffff;
-  --surface-dark: #1a2230;
-  --foreground: #111318;
-  --foreground-dark: #ffffff;
+  --primary: #E95335;
+  --primary-light: #EF826C;
+  --primary-lighter: #F5A89A;
+  --primary-lightest: #FDF5F3;
+  --surface: #ffffff;
+  --foreground: #000000;
 }
 
 @theme inline {
   --color-primary: var(--primary);
-  --color-background-light: var(--background-light);
-  --color-background-dark: var(--background-dark);
-  --color-surface-light: var(--surface-light);
-  --color-surface-dark: var(--surface-dark);
+  --color-primary-light: var(--primary-light);
+  --color-primary-lighter: var(--primary-lighter);
+  --color-primary-lightest: var(--primary-lightest);
   --font-sans: var(--font-inter);
 }
 
 /* Base Styles */
 body {
-  @apply bg-background-light text-slate-900;
+  @apply bg-[#FFF9F7] text-black;
   font-family: 'Inter', system-ui, sans-serif;
-}
-
-.dark body {
-  @apply bg-background-dark text-white;
 }
 
 /* Material Symbols */
@@ -43,7 +37,7 @@ body {
 @layer utilities {
   /* Shadow Glow for Selected Cards */
   .shadow-glow {
-    box-shadow: 0 0 20px rgba(19, 91, 236, 0.15);
+    box-shadow: 0 0 20px rgba(233, 83, 53, 0.15);
   }
 
   /* Shimmer Animation for Buttons */
@@ -85,19 +79,11 @@ body {
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-slate-300 rounded;
-  }
-
-  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-slate-600;
+    @apply bg-gray-300 rounded;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-400;
-  }
-
-  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-500;
+    @apply bg-gray-400;
   }
 
   /* Line Clamp Utilities */
@@ -120,6 +106,6 @@ body {
 .wave-bar {
   width: 6px;
   border-radius: 9999px;
-  background-color: var(--primary);
+  background-color: #E95335;
   transition: height 0.2s ease;
 }

@@ -19,11 +19,11 @@ const categoryConfig: Record<SessionCategory, { icon: string; color: 'indigo' | 
 };
 
 const tagColors: Record<string, string> = {
-  'AI': 'bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400',
-  'Productivity': 'bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400',
-  'Business': 'bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400',
-  'Marketing': 'bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400',
-  'Tech': 'bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
+  'AI': 'bg-teal-50 text-teal-700',
+  'Productivity': 'bg-indigo-50 text-indigo-700',
+  'Business': 'bg-green-50 text-green-700',
+  'Marketing': 'bg-orange-50 text-orange-700',
+  'Tech': 'bg-purple-50 text-purple-700',
 };
 
 export function SessionRow({ session }: SessionRowProps) {
@@ -36,16 +36,16 @@ export function SessionRow({ session }: SessionRowProps) {
   }, [session.createdAt]);
 
   return (
-    <div className="group flex items-center gap-4 p-4 rounded-xl hover:bg-[#F7F7F8] dark:hover:bg-slate-800/50 transition-all cursor-pointer">
+    <div className="group flex items-center gap-4 p-4 rounded-xl hover:bg-[#FDF5F3] transition-all cursor-pointer">
       {/* Category Icon */}
       <IconWrapper icon={config.icon} color={config.color} filled />
 
       {/* Session Info */}
       <div className="flex-1 min-w-0">
-        <h4 className="text-sm font-semibold text-slate-900 dark:text-white truncate">
+        <h4 className="text-sm font-semibold text-slate-900 truncate">
           {session.title}
         </h4>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-slate-500">
           {relativeTime || 'Loading...'} • {formatDurationLong(session.duration)}
         </p>
       </div>
@@ -57,7 +57,7 @@ export function SessionRow({ session }: SessionRowProps) {
             key={tag}
             className={cn(
               'px-2 py-0.5 text-[10px] font-semibold rounded-md',
-              tagColors[tag] || 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
+              tagColors[tag] || 'bg-slate-100 text-slate-600'
             )}
           >
             {tag}
@@ -68,11 +68,11 @@ export function SessionRow({ session }: SessionRowProps) {
       {/* Actions (visible on hover) */}
       <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <Link href={`/review/${session.id}`}>
-          <button className="px-3 py-1.5 text-xs font-semibold text-[#135bec] bg-[#135bec]/10 hover:bg-[#135bec]/20 rounded-lg transition-colors">
+          <button className="px-3 py-1.5 text-xs font-semibold text-[#E95335] bg-[#E95335]/10 hover:bg-[#E95335]/20 rounded-lg transition-colors">
             View Content
           </button>
         </Link>
-        <button className="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+        <button className="p-1.5 text-slate-400 hover:text-slate-600 transition-colors">
           <span className="material-symbols-outlined text-[18px]">content_copy</span>
         </button>
       </div>

@@ -23,23 +23,23 @@ export function TranscriptMessage({
     return (
       <div
         className={cn(
-          'p-4 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-slate-100 dark:border-slate-800',
+          'p-4 bg-white rounded-xl shadow-sm border border-slate-100',
           isFaded && 'opacity-40',
-          isCurrentQuestion && 'border-l-4 border-l-[#135bec]'
+          isCurrentQuestion && 'border-l-4 border-l-[#E95335]'
         )}
       >
         <div className="flex items-center gap-2 mb-2">
-          <span className="material-symbols-outlined text-[#135bec] text-[18px]">
+          <span className="material-symbols-outlined text-[#E95335] text-[18px]">
             smart_toy
           </span>
-          <p className="text-sm font-semibold text-[#135bec]">
+          <p className="text-sm font-semibold text-[#E95335]">
             AI Interviewer
             {isCurrentQuestion && (
               <span className="font-normal text-slate-500"> • Current Question</span>
             )}
           </p>
         </div>
-        <p className="text-base text-slate-900 dark:text-white leading-relaxed">
+        <p className="text-base text-slate-900 leading-relaxed">
           {message.content}
         </p>
       </div>
@@ -49,7 +49,7 @@ export function TranscriptMessage({
   return (
     <div
       className={cn(
-        'p-4 border-l-2 border-[#135bec]/20',
+        'p-4 border-l-2 border-[#E95335]/20',
         isFaded && 'opacity-40'
       )}
     >
@@ -57,13 +57,13 @@ export function TranscriptMessage({
         <span className="material-symbols-outlined text-slate-400 text-[18px]">
           person
         </span>
-        <span className="text-sm font-medium text-slate-600 dark:text-slate-400">You</span>
+        <span className="text-sm font-medium text-slate-600">You</span>
         {isRecording && <StatusBadge variant="recording" />}
       </div>
-      <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+      <p className="text-base text-slate-700 leading-relaxed">
         {message.content}
         {isRecording && (
-          <span className="inline-block w-0.5 h-5 bg-[#135bec] ml-1 animate-pulse" />
+          <span className="inline-block w-0.5 h-5 bg-[#E95335] ml-1 animate-pulse" />
         )}
       </p>
     </div>

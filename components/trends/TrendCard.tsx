@@ -24,8 +24,8 @@ export function TrendCard({ topic, isSelected, onToggle, onExpand }: TrendCardPr
       className={cn(
         'relative flex flex-col rounded-xl p-6 transition-all duration-200 cursor-pointer',
         isSelected
-          ? 'border-2 border-[#135bec] bg-white dark:bg-slate-800 shadow-glow'
-          : 'border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-[#135bec]/50 hover:-translate-y-1 hover:shadow-md'
+          ? 'border-2 border-[#E95335] bg-white shadow-glow'
+          : 'border border-slate-200 bg-white hover:border-[#E95335]/50 hover:-translate-y-1 hover:shadow-md'
       )}
       onClick={() => onToggle(topic.rank)}
     >
@@ -35,8 +35,8 @@ export function TrendCard({ topic, isSelected, onToggle, onExpand }: TrendCardPr
           className={cn(
             'px-2 py-1 rounded-md text-xs font-bold',
             isSelected
-              ? 'bg-[#135bec] text-white'
-              : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
+              ? 'bg-[#E95335] text-white'
+              : 'bg-slate-100 text-slate-600'
           )}
         >
           Rank #{topic.rank}
@@ -53,8 +53,8 @@ export function TrendCard({ topic, isSelected, onToggle, onExpand }: TrendCardPr
           className={cn(
             'size-6 rounded-full flex items-center justify-center transition-all',
             isSelected
-              ? 'bg-[#135bec] text-white shadow-sm'
-              : 'border-2 border-slate-300 dark:border-slate-600 hover:border-[#135bec]'
+              ? 'bg-[#E95335] text-white shadow-sm'
+              : 'border-2 border-slate-300 hover:border-[#E95335]'
           )}
         >
           {isSelected && (
@@ -65,11 +65,11 @@ export function TrendCard({ topic, isSelected, onToggle, onExpand }: TrendCardPr
 
       {/* Content */}
       <div className="mt-10">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">
+        <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight">
           {topic.topic_title}
         </h3>
         <p className={cn(
-          'text-sm text-slate-600 dark:text-slate-400 mb-4',
+          'text-sm text-slate-600 mb-4',
           !isExpanded && 'line-clamp-3'
         )}>
           {topic.why_this_matters}
@@ -81,7 +81,7 @@ export function TrendCard({ topic, isSelected, onToggle, onExpand }: TrendCardPr
             e.stopPropagation();
             handleExpand();
           }}
-          className="text-sm text-[#135bec] font-medium hover:underline flex items-center gap-1"
+          className="text-sm text-[#E95335] font-medium hover:underline flex items-center gap-1"
         >
           {isExpanded ? 'Hide' : 'View'} {topic.key_questions.length} Key Questions
           <span className="material-symbols-outlined text-[16px]">
@@ -91,29 +91,29 @@ export function TrendCard({ topic, isSelected, onToggle, onExpand }: TrendCardPr
 
         {/* Expanded Content */}
         {isExpanded && (
-          <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700">
+          <div className="mt-4 pt-4 border-t border-slate-100">
             {/* Global Context */}
             <div className="mb-4">
-              <h4 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+              <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">
                 Context
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
+              <p className="text-sm text-slate-600">
                 {topic.global_context}
               </p>
             </div>
 
             {/* Key Questions */}
             <div>
-              <h4 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+              <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">
                 Key Questions
               </h4>
               <ul className="space-y-2">
                 {topic.key_questions.map((question, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400"
+                    className="flex items-start gap-2 text-sm text-slate-600"
                   >
-                    <span className="text-[#135bec] font-bold text-xs mt-0.5">
+                    <span className="text-[#E95335] font-bold text-xs mt-0.5">
                       {index + 1}.
                     </span>
                     {question}

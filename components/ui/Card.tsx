@@ -8,9 +8,9 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', ...props }, ref) => {
     const variants = {
-      default: 'bg-white dark:bg-surface-dark',
-      bordered: 'bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700',
-      elevated: 'bg-white dark:bg-surface-dark shadow-md',
+      default: 'bg-[#FFF3ED]',
+      bordered: 'bg-[#FFF3ED] border border-[#E95335]/20',
+      elevated: 'bg-[#FFF3ED] shadow-md',
     };
 
     return (
@@ -40,7 +40,7 @@ const CardTitle = forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadin
   ({ className, ...props }, ref) => (
     <h3
       ref={ref}
-      className={cn('text-xl font-bold text-slate-900 dark:text-white', className)}
+      className={cn('text-xl font-bold text-black', className)}
       {...props}
     />
   )
@@ -51,7 +51,7 @@ const CardDescription = forwardRef<HTMLParagraphElement, React.HTMLAttributes<HT
   ({ className, ...props }, ref) => (
     <p
       ref={ref}
-      className={cn('text-sm text-slate-500 dark:text-slate-400', className)}
+      className={cn('text-sm text-gray-600', className)}
       {...props}
     />
   )
@@ -67,7 +67,7 @@ CardContent.displayName = 'CardContent';
 
 const CardFooter = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn('mt-4 pt-4 border-t border-slate-100 dark:border-slate-800', className)} {...props} />
+    <div ref={ref} className={cn('mt-4 pt-4 border-t border-gray-100', className)} {...props} />
   )
 );
 CardFooter.displayName = 'CardFooter';

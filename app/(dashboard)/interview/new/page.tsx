@@ -72,23 +72,23 @@ export default function InterviewSetupPage() {
 
     if (isLoading) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-screen bg-background-light dark:bg-background-dark">
-                <Loader2 className="w-10 h-10 text-indigo-600 animate-spin mb-4" />
-                <p className="text-slate-600 dark:text-slate-400">Loading research context...</p>
+            <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+                <Loader2 className="w-10 h-10 text-[#E95335] animate-spin mb-4" />
+                <p className="text-slate-600">Loading research context...</p>
             </div>
         );
     }
 
     if (error) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-screen bg-background-light dark:bg-background-dark p-6">
-                <div className="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-4 rounded-xl flex items-center gap-3 border border-red-100 dark:border-red-900/30 max-w-md w-full">
+            <div className="flex flex-col items-center justify-center min-h-screen bg-white p-6">
+                <div className="bg-red-50 text-red-600 p-4 rounded-xl flex items-center gap-3 border border-red-100 max-w-md w-full">
                     <AlertCircle className="w-6 h-6 flex-shrink-0" />
                     <p>{error}</p>
                 </div>
                 <button
                     onClick={() => router.push('/discover/trending')}
-                    className="mt-6 px-6 py-2 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                    className="mt-6 px-6 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors"
                 >
                     Back to Discovery
                 </button>
@@ -99,18 +99,18 @@ export default function InterviewSetupPage() {
     if (!researchResult) return null;
 
     return (
-        <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-white pb-20">
+        <div className="min-h-screen bg-white text-slate-900 pb-20">
             {/* Header */}
-            <header className="sticky top-0 z-10 bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+            <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-200">
                 <div className="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
                     <button
                         onClick={() => router.back()}
-                        className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-colors"
+                        className="flex items-center gap-2 text-slate-500 hover:text-[#E95335] transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
                         <span className="font-medium">Back</span>
                     </button>
-                    <div className="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+                    <div className="text-sm font-semibold text-slate-400 uppercase tracking-wider">
                         Interview Setup
                     </div>
                 </div>
@@ -118,23 +118,23 @@ export default function InterviewSetupPage() {
 
             <main className="max-w-3xl mx-auto px-6 py-10">
                 <div className="mb-10 text-center">
-                    <div className="inline-flex items-center justify-center p-3 bg-indigo-50 rounded-full mb-6">
-                        <Mic className="w-8 h-8 text-indigo-600" />
+                    <div className="inline-flex items-center justify-center p-3 bg-[#FDF5F3] rounded-full mb-6">
+                        <Mic className="w-8 h-8 text-[#E95335]" />
                     </div>
-                    <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight">
+                    <h1 className="text-3xl font-bold text-slate-900 mb-3 tracking-tight">
                         Ready to record?
                     </h1>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
-                        Configure your AI host before starting the interview session about <span className="text-slate-900 dark:text-white font-semibold">{researchResult.title}</span>.
+                    <p className="text-lg text-slate-600 max-w-xl mx-auto">
+                        Configure your AI host before starting the interview session about <span className="text-slate-900 font-semibold">{researchResult.title}</span>.
                     </p>
                 </div>
 
-                <div className="bg-white dark:bg-surface-dark rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                     <div className="p-8">
                         {/* Topic Summary */}
-                        <div className="mb-8 p-4 bg-slate-50 dark:bg-slate-900/40 rounded-xl border border-slate-100 dark:border-slate-800">
-                            <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide">Topic Context</h3>
-                            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
+                        <div className="mb-8 p-4 bg-[#FDF5F3] rounded-xl border border-slate-100">
+                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wide">Topic Context</h3>
+                            <p className="text-slate-700 leading-relaxed text-sm">
                                 {researchResult.deep_context.length > 250
                                     ? `${researchResult.deep_context.substring(0, 250)}...`
                                     : researchResult.deep_context}
@@ -144,20 +144,20 @@ export default function InterviewSetupPage() {
                         {/* Guest Configuration */}
                         <div className="space-y-6">
                             <div>
-                                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                <label className="block text-sm font-medium text-slate-700 mb-2">
                                     Your Name (Guest)
                                 </label>
                                 <div className="relative">
-                                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 dark:text-slate-500" />
+                                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                                     <input
                                         type="text"
                                         value={userName}
                                         onChange={(e) => setUserName(e.target.value)}
-                                        className="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-xl focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all outline-none"
+                                        className="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-[#E95335]/20 focus:border-[#E95335] transition-all outline-none"
                                         placeholder="Enter your name"
                                     />
                                 </div>
-                                <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                                <p className="mt-2 text-xs text-slate-500">
                                     The AI host will address you by this name during the interview.
                                 </p>
                             </div>
@@ -169,8 +169,8 @@ export default function InterviewSetupPage() {
                                 className={`
                   w-full py-4 px-6 rounded-xl flex items-center justify-center gap-3 font-semibold text-lg transition-all
                   ${isGenerating || !userName.trim()
-                                        ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed'
-                                        : 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98]'
+                                        ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                                        : 'bg-[#E95335] hover:bg-[#EF826C] text-white shadow-lg hover:shadow-[#E95335]/25 active:scale-[0.98]'
                                     }
                 `}
                             >
@@ -190,7 +190,7 @@ export default function InterviewSetupPage() {
                     </div>
 
                     {/* Footer Info */}
-                    <div className="bg-slate-50 dark:bg-slate-900/40 px-8 py-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                    <div className="bg-[#FDF5F3] px-8 py-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                         <span>Powered by Deepgram + Perplexity + Deepseek</span>
                         <div className="flex items-center gap-1.5">
                             <span className="w-2 h-2 rounded-full bg-green-500"></span>

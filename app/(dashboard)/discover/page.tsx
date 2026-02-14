@@ -31,10 +31,10 @@ export default function DiscoverPage() {
       <div className="w-full max-w-2xl">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-3">
             What do you want to talk about today?
           </h1>
-          <p className="text-slate-500 dark:text-slate-400 text-base md:text-lg">
+          <p className="text-slate-500 text-base md:text-lg">
             Enter 3-5 keywords separated by commas to get started
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function DiscoverPage() {
         </Button>
 
         {/* Helper text */}
-        <p className="text-center text-sm text-slate-400 dark:text-slate-500 mt-4">
+        <p className="text-center text-sm text-slate-400 mt-4">
           We&apos;ll analyze conversations to generate unique, trending ideas for your content
         </p>
       </div>

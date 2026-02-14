@@ -73,15 +73,15 @@ export default function TrendingTopicsPage() {
       </PageHeader>
 
       <div className="animate-in fade-in-50 duration-500">
-        <div className="bg-slate-50 dark:bg-slate-900/50 p-8 md:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl -translate-y-20 translate-x-20" />
+        <div className="bg-white p-8 md:p-10 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-40 h-40 bg-[#E95335]/10 rounded-full blur-3xl -translate-y-20 translate-x-20" />
 
-          <h1 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#E95335] to-[#EF826C] mb-4">
             {research.title}
           </h1>
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-base md:text-lg mb-8"
+            className="text-slate-600 leading-relaxed text-base md:text-lg mb-8"
             style={{
               display: '-webkit-box',
               WebkitLineClamp: 3,
@@ -94,7 +94,7 @@ export default function TrendingTopicsPage() {
 
           <Button
             size="lg"
-            className="shadow-lg shadow-indigo-500/20 bg-indigo-600 hover:bg-indigo-700 text-white min-w-[220px]"
+            className="shadow-lg shadow-[#E95335]/20 bg-[#E95335] hover:bg-[#EF826C] text-white min-w-[220px]"
             onClick={handleStartInterview}
           >
             <span className="material-symbols-outlined mr-2">mic</span>

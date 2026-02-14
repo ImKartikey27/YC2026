@@ -16,7 +16,7 @@ export function AmbientGlow({ className, size = 'lg' }: AmbientGlowProps) {
     <div
       className={cn(
         'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
-        'bg-[#135bec]/5 dark:bg-[#135bec]/10',
+        'bg-[#E95335]/5',
         'rounded-full blur-[100px] -z-10 pointer-events-none',
         sizes[size],
         className

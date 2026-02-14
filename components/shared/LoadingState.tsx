@@ -41,7 +41,7 @@ export function LoadingState({ message, messages, className, showTimer = true }:
         {BAR_HEIGHTS.map((height, i) => (
           <div
             key={i}
-            className="w-1 bg-[#135bec] rounded-full animate-pulse"
+            className="w-1 bg-[#E95335] rounded-full animate-pulse"
             style={{
               height: `${height}px`,
               animationDelay: `${i * 0.1}s`,
@@ -49,11 +49,11 @@ export function LoadingState({ message, messages, className, showTimer = true }:
           />
         ))}
       </div>
-      <p className="text-slate-600 dark:text-slate-400 font-medium animate-pulse">
+      <p className="text-slate-600 font-medium animate-pulse">
         {displayMessage}
       </p>
       {showTimer && (
-        <p className="text-slate-400 dark:text-slate-500 text-sm mt-3">
+        <p className="text-slate-400 text-sm mt-3">
           Elapsed: {formatTime(elapsedSeconds)}
         </p>
       )}

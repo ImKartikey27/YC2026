@@ -14,7 +14,7 @@ export function Skeleton({ className, variant = 'rectangular', ...props }: Skele
   return (
     <div
       className={cn(
-        'animate-pulse bg-slate-100 dark:bg-slate-800',
+        'animate-pulse bg-gray-100',
         variants[variant],
         className
       )}

@@ -9,13 +9,13 @@ interface IconWrapperProps {
 }
 
 const colorStyles = {
-  indigo: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400',
-  teal: 'bg-teal-50 text-teal-600 dark:bg-teal-900/30 dark:text-teal-400',
-  green: 'bg-green-50 text-green-600 dark:bg-green-900/30 dark:text-green-400',
-  orange: 'bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400',
-  pink: 'bg-pink-50 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400',
-  purple: 'bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400',
-  primary: 'bg-[#135bec]/10 text-[#135bec]',
+  indigo: 'bg-indigo-50 text-indigo-600',
+  teal: 'bg-teal-50 text-teal-600',
+  green: 'bg-green-50 text-green-600',
+  orange: 'bg-orange-50 text-orange-600',
+  pink: 'bg-pink-50 text-pink-600',
+  purple: 'bg-purple-50 text-purple-600',
+  primary: 'bg-[#E95335]/10 text-[#E95335]',
 };
 
 const sizeStyles = {

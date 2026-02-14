@@ -46,13 +46,13 @@ export default function VoiceAgentUiPage() {
   const statusLabel = isMuted ? 'Muted' : 'UI Preview';
 
   return (
-    <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
-      <header className="flex items-center justify-between px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark">
+    <div className="min-h-screen flex flex-col bg-white">
+      <header className="flex items-center justify-between px-4 md:px-6 py-3 border-b border-slate-200 bg-white">
         <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="size-8 rounded-lg bg-[#135bec] flex items-center justify-center text-white">
+          <div className="size-8 rounded-lg bg-[#E95335] flex items-center justify-center text-white">
             <span className="material-symbols-outlined text-[20px]">graphic_eq</span>
           </div>
-          <span className="font-bold text-slate-900 dark:text-white hidden md:inline">LadderFlow</span>
+          <span className="font-bold text-slate-900 hidden md:inline">LadderFlow</span>
         </Link>
 
         <div className="flex items-center gap-4">
@@ -60,7 +60,7 @@ export default function VoiceAgentUiPage() {
           <ProgressPill current={questionCount} total={5} />
         </div>
 
-        <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+        <div className="flex items-center gap-2 text-slate-600">
           <span className="material-symbols-outlined text-[20px]">timer</span>
           <span className="font-mono text-sm font-medium">{formatDuration(duration)}</span>
         </div>
@@ -69,10 +69,10 @@ export default function VoiceAgentUiPage() {
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
         <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-10">
           <div className="mb-6 text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900">
               Voice Agent UI Preview
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+            <p className="text-xs text-slate-500 mt-2">
               UI-only mode. No live Deepgram or backend calls.
             </p>
           </div>
@@ -80,16 +80,16 @@ export default function VoiceAgentUiPage() {
           <Waveform isActive={!isMuted} size="lg" />
 
           <div className="mt-6 text-center">
-            <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider">
               {isMuted ? 'Muted' : 'Listening'}
             </p>
           </div>
         </div>
 
-        <div className="w-full md:w-96 border-t md:border-t-0 md:border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark flex flex-col">
-          <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <h3 className="font-semibold text-slate-900 dark:text-white">Live Transcript</h3>
-            <span className="text-xs text-slate-500 dark:text-slate-400">{MOCK_MESSAGES.length} messages</span>
+        <div className="w-full md:w-96 border-t md:border-t-0 md:border-l border-slate-200 bg-white flex flex-col">
+          <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
+            <h3 className="font-semibold text-slate-900">Live Transcript</h3>
+            <span className="text-xs text-slate-500">{MOCK_MESSAGES.length} messages</span>
           </div>
 
           <TranscriptPanel
